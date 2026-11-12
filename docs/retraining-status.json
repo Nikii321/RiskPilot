@@ -1,0 +1,34 @@
+{
+  "enabled": true,
+  "cron": "0 0 3 * * *",
+  "zone": "Europe/Moscow",
+  "nextRunAt": "2026-11-13T03:00+03:00",
+  "sourcePath": "./training-data/history.csv",
+  "queuedDataset": null,
+  "runs": [
+    {
+      "id": "92a7afcc-387b-4f4e-a25b-b65253ca05fe",
+      "startedAt": "2026-11-12T22:24:39.919360549Z",
+      "finishedAt": "2026-11-12T22:24:39.932430715Z",
+      "status": "SKIPPED",
+      "trigger": "MANUAL",
+      "sourceName": "Синтетическая демонстрационная история",
+      "fingerprint": "f0950d23066f067e87cbfbd8d0037ffd1db584d9ecb8709e85f5af0aefeaa23d",
+      "modelId": "4dacf42f-4d6b-4c7e-8330-ead8a442c220",
+      "message": "Такие данные и настройки уже проверялись; повторное обучение не требуется"
+    },
+    {
+      "id": "e69e232b-9615-4a7d-8f34-39636d074124",
+      "startedAt": "2026-11-12T22:24:39.816351674Z",
+      "finishedAt": "2026-11-12T22:24:39.911364715Z",
+      "status": "ACTIVATED",
+      "trigger": "MANUAL",
+      "sourceName": "Синтетическая демонстрационная история",
+      "fingerprint": "f0950d23066f067e87cbfbd8d0037ffd1db584d9ecb8709e85f5af0aefeaa23d",
+      "modelId": "4dacf42f-4d6b-4c7e-8330-ead8a442c220",
+      "message": "Новая версия активирована; validation AUC=0.7043983621714437, Brier=0.21686231781880888; текущая модель Brier=0.21686225932365397"
+    }
+  ],
+  "minValidationAuc": 0.55,
+  "maxBrierRegression": 0.005
+}
