@@ -1,6 +1,6 @@
 # Работа с Git в RiskPilot
 
-RiskPilot — отдельный Git-репозиторий. Его корень: `/Users/nikolajvereschagin/Travel-AI/RiskPilot`. У него собственная папка `.git`, отдельный индекс, коммиты и remote `origin`. Расположение внутри каталога Travel-AI не объединяет их истории. В локальном `.git/info/exclude` родительского репозитория указан `/RiskPilot/`, поэтому родитель не предлагает добавить этот проект.
+RiskPilot — отдельный Git-репозиторий. Его корень: `/Users/nikolajvereschagin/Desktop/RiskPilot`. У него собственная папка `.git`, отдельный индекс и коммиты. Remote `origin` указывает на `https://github.com/Nikii321/RiskPilot.git`. Проект находится на рабочем столе и не входит в репозиторий Travel-AI.
 
 ## Что означает индекс
 
@@ -12,12 +12,12 @@ RiskPilot — отдельный Git-репозиторий. Его корень
 
 ## Что отправляется в GitHub
 
-Исходники `src`, настройки Gradle и wrapper, Dockerfile, Compose, GitHub Actions, README, документация, учебные данные и экспорт демонстрационной модели. Локальные `.env`, `.idea`, `.gradle`, `.kotlin`, `build`, база в `data` и CSV из `training-data` игнорируются. `.env.example` — публикуемый образец, а `docs/synthetic-history.csv` — намеренно включённая синтетическая история. Пароль локальной БД из `.env` в коммит не входит.
+Исходники `src`, настройки Gradle и wrapper, Dockerfile, Compose, README, документация, учебные данные и экспорт демонстрационной модели. Локальные `.env`, `.idea`, `.gradle`, `.kotlin`, `build`, база в `data` и CSV из `training-data` игнорируются. `.env.example` — публикуемый образец, а `docs/synthetic-history.csv` — намеренно включённая синтетическая история. Пароль локальной БД из `.env` в коммит не входит.
 
 ## Проверка перед коммитом
 
 ```bash
-cd /Users/nikolajvereschagin/Travel-AI/RiskPilot
+cd /Users/nikolajvereschagin/Desktop/RiskPilot
 git rev-parse --show-toplevel
 git status --short
 git diff
@@ -40,4 +40,4 @@ git push
 
 ## IntelliJ IDEA
 
-Откройте папку RiskPilot отдельным проектом. В Settings → Version Control → Directory Mappings корнем Git должна быть папка RiskPilot. Изменения смотрите в Commit, корень репозитория проверяйте перед Commit и Push. После создания вложенного репозитория IDEA может предложить добавить обнаруженный Git root — выберите RiskPilot. Перемещать проект на диске не требуется.
+Откройте папку RiskPilot отдельным проектом. В Settings → Version Control → Directory Mappings корнем Git должна быть папка RiskPilot. Изменения смотрите в Commit, корень репозитория проверяйте перед Commit и Push. Если IDEA предлагает добавить обнаруженный Git root, выберите папку RiskPilot на рабочем столе.
